@@ -152,8 +152,8 @@ workflow CRISPRSEQ_SCREENING {
         }.set { ch_counts }
     }
 
-    if(params.rra_contrasts) {
-        Channel.fromPath(params.rra_contrasts)
+    if(params.contrasts) {
+        Channel.fromPath(params.contrasts)
             .splitCsv(header:true, sep:';' )
             .set { ch_contrasts }
         counts = ch_contrasts.combine(ch_counts)
@@ -167,8 +167,8 @@ workflow CRISPRSEQ_SCREENING {
         )
     }
 
-    if(params.rra_contrasts) {
-        Channel.fromPath(params.rra_contrasts)
+    if(params.contrasts) {
+        Channel.fromPath(params.contrasts)
             .splitCsv(header:true, sep:';' )
             .set { ch_bagel }
     counts = ch_bagel.combine(ch_counts)

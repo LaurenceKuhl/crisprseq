@@ -52,7 +52,7 @@ After the alignment step, the pipeline currently supports 3 algorithms to detect
 
 ### MAGeCK rra
 
-MAGeCK RRA performs robust ranking aggregation to identify genes that are consistently ranked highly across multiple replicate screens. To run MAGeCK rra, `--rra_contrasts` contains two columns : treatment and reference. These two columns should be separated with a dot comma (;) and contain the `csv` extension. You can also integrate several samples/conditions by comma separating them. Please find an example here below :
+MAGeCK RRA performs robust ranking aggregation to identify genes that are consistently ranked highly across multiple replicate screens. To run MAGeCK rra, the file defined with the flag `--contrasts` contains two columns : treatment and reference. These two columns should be separated with a dot comma (;) and contain the `csv` extension. You can also integrate several samples/conditions by comma separating them. Please find an example here below :
 
 | treatment | reference |
 |-----------------------|-------------------|
@@ -78,7 +78,7 @@ CRISPRcleanR is used for gene count normalization and the removal of biases for 
 ### BAGEL2
 
 BAGEL2 (Bayesian Analysis of Gene Essentiality with Location) is a computational tool developed by the Hart Lab at Harvard University. It is designed for analyzing large-scale genetic screens, particularly CRISPR-Cas9 screens, to identify genes that are essential for the survival or growth of cells under different conditions. BAGEL2 integrates information about the location of guide RNAs within a gene and leverages this information to improve the accuracy of gene essentiality predictions.
-BAGEL2 uses the same contrasts from `--rra_contrasts`.
+BAGEL2 uses the same contrasts from `--contrasts`.
 
 Note that the pipeline will create the following files in your working directory:
 
