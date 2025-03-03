@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make output of FluteMLE optional as when some pathways produce bugs some channels are then empty ([#190](https://github.com/nf-core/crisprseq/pull/190))
 - Fix a typo in crisprcleanr/normalize, when a user inputs a file ([#192](https://github.com/nf-core/crisprseq/pull/192))
 - Add Singularity and Docker tests in the CI, also fix any issues users had when running MAGeCKFlute with Docker or Singularity. ([#214](https://github.com/nf-core/crisprseq/pull/214))
+- Small fix in the environment.yml of the crisprcleanr module
 
 ### General
 
